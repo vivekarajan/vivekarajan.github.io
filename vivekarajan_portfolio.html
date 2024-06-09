@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Vivekarajan - Portfolio</title>
+
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"></link>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css"></link> -->
+
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style id="webmakerstyle">
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700");
+* {
+  font-family: "Work Sans", sans-serif; }
+
+.bgYellow {
+  background-color: #07cff6; }
+
+body {
+  background-color: #ffffff; }
+
+aside {
+  background-color: #07cff6; }
+
+main {
+  background-color: #0b090c; }
+
+.noBullets {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+  .noBullets li {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+.bottomSection .name {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #0b090c;
+  margin-bottom: 20px;
+  position: relative; }
+  .bottomSection .name::before {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 100%;
+    border-bottom: 1px solid rgba(11, 9, 12, 0.25);
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto; }
+
+.timeline .block {
+  color: #07cff6;
+  position: relative;
+  padding: 10px 0; }
+  .timeline .block:not(:last-child) {
+    border-bottom: 1px solid #023943; }
+    .timeline .block:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      top: 46px;
+      bottom: 0;
+      left: -1.5rem;
+      margin: auto;
+      height: 100%;
+      width: 2px;
+      background-color: #07cff6; }
+  .timeline .block .heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    text-transform: uppercase; }
+    .timeline .block .heading::before {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background-color: #07cff6;
+      border-radius: 500px;
+      top: 12px;
+      left: -28px; }
+  .timeline .block .subHeading {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px auto 2px;
+    position: relative;
+    font-weight: 600; }
+    .timeline .block .subHeading::before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      box-sizing: border-box;
+      border: 1px solid #07cff6;
+      background-color: #0b090c;
+      border-radius: 500px;
+      top: 8px;
+      left: -27px; }
+  .timeline .block p {
+    margin-bottom: 0px; }
+
+.timeline .skillBar {
+  margin: 10px auto; }
+  .timeline .skillBar .circularProgress {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 500px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 20px auto; }
+    .timeline .skillBar .circularProgress::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 90%;
+      width: 90%;
+      border: 1px solid #035261;
+      border-radius: 500px;
+      z-index: 1;
+      background-color: #0b090c; }
+    .timeline .skillBar .circularProgress .icon {
+      height: 80px;
+      width: 80px;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px; }
+  .timeline .skillBar .skill {
+    text-align: center;
+    margin: 10px auto;
+    text-transform: uppercase;
+    font-size: 14px; }
+
+.profileImage {
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .profileImage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* background-color: rgba(7, 207, 246, 0.25);  */
+  }
+  .profileImage img {
+    margin: auto;
+    max-height: 450px; }
+
+@media (min-width: 992px) {
+  .profileWrapper aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 400px; }
+  .profileWrapper main {
+    padding: 20px;
+    margin-left: 400px;
+    width: 100%; } }
+
+.socialLinks li {
+  display: flex;
+  align-items: center;
+  width: 100%; }
+  .socialLinks li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    outline: 0; }
+
+.socialLinks .icon {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #0b090c;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #07cff6;
+  background-color: #0b090c;
+  border-radius: 500px;
+  transition: all ease 0.25s;
+  outline: 0; }
+  .socialLinks .icon:hover {
+    background-color: #18141b; }
+
+.email a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0b090c; }
+  .email a:hover {
+    color: #261f29; }
+
+.profileImage {
+  height: 350px;
+  overflow: hidden; }
+  .profileImage img {
+    height: 350px; }
+
+</style>
+<style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style></head>
+<body>
+<div class="profileWrapper d-lg-flex">
+      <aside style="overflow:auto;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 px-0">
+              <div class="imgContainer profileImage">
+                <img src="C:\Users\ksvim\OneDrive\Desktop\resumes\portfolio\WhatsApp Image 2024-01-20 at 12.51.20 PM.jpeg" class="img-fluid">
+              </div>
+              <div class="bottomSection">
+                <div class="wrapper p-1">
+                  <div class="name">
+                    Vivekarajan S
+                  </div>
+                  <div class="socialLinks">
+                    <ul class="noBullets d-flex justify-content-center">
+                      <li>
+                        <a href="https://www.linkedin.com/in/vivekarajan-s" target="_blank" class="nav-link d-flex"><i class="fab fa-linkedin-in icon"></i>
+                        </a>
+                      </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1yQtjs_hs6jeUsY4W83SDZybbd-HejQF3/view?usp=sharing" target="_blank" class="nav-link"
+                          ><i class="fa-regular fa-file-pdf icon"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/vivekarajan" target="_blank" class="nav-link"><i class="fab fa-github icon"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="email">
+                    <a href="mailto:vivekarajan.sv@gmail.com" class="nav-link"><i class="fas fa-envelope mr-2"></i>vivekarajan.sv@gmail.com</a>
+                  </div>
+                  <div>
+                    <a href="https://www.guvi.in/vivekarajansv09" class="nav-link">GUVI profile</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 px-0">
+              <div class="timeline pl-5 pr-3 py-4">
+                <div class="block">
+                  <div class="heading">
+                    About me
+                  </div>
+                  <p class="text-justify">
+                    I want to succeed in a stimulating and challenging environment,
+building the success of the company while I experience
+advancement opportunities.
+                  </p>
+                </div>
+				  <div class="block">
+                  <div class="heading">
+                    Objective
+                  </div>
+                  <p class="text-justify">
+                    I'm passionate about transforming unstructured data into useful insights, and I enjoy identifying patterns and trends that assist people make wise decisions. 
+                    with proficiency in Python, SQL, and Analytics.
+                  </p>
+                </div>
+                <div class="block">
+                  <div class="heading">
+                    Education
+                  </div>
+
+                  <div class="subHeading">
+                    IIT-MADRAS Advanced Programming Professional & Master Data Science
+                  </div>
+                  <p>
+                    </p><li><b>Institution:</b> GUVI</li>
+					  <li><b>Associated with:</b> IIT-MADRAS</li>
+					  
+					  <li><b>Duration:</b> FEB 2024 - JUN 2024</li>
+                  <p></p>
+
+                  <div class="subHeading">
+                    B.Tech Information Technology
+                  </div>
+                  <p>
+                    </p><li><b>College:</b> Kamaraj College of Engineering and
+Technologies, Virudhunagar</li>
+					  <li><b>University:</b> Anna University</li>
+					  <li><b>CGPA:</b> 6.3 </li>
+					  <li><b>Duration:</b> 2015-2019</li>
+                  <p></p>
+                  <div class="subHeading">
+                    HSC
+                  </div>
+                  <p>
+					  </p><li><b>School:</b> K.V.S Higher Secondary School,
+Virudhunagar</li>
+					  <li><b>Board:</b> State Board</li>
+<li><b>Percentage:</b> 72.17%</li>
+<li><b>Duration:</b> 2014 - 2015</li>
+                  <p></p>
+				<div class="subHeading">
+                    SSLC
+                  </div>
+                  <p>
+					  </p><li><b>School:</b> K.V.S Higher Secondary School,
+Virudhunagar</li>
+					  <li><b>Board:</b> State Board</li>
+<li><b>Percentage:</b> 80.2%</li>
+<li><b>Duration:</b> 2012 - 2013</li>
+                  <p></p>
+                </div>
+                <div class="block">
+                  <div class="heading">
+                    skills
+                  </div>
+                  <div class="skillBar">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="circularProgress" data-progress="65%">
+                          <div class="icon"><img width="48" height="48" src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"></div>
+                        </div>
+                        <div class="skill">PYTHON</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="circularProgress" data-progress="50%">
+                          <div class="icon">
+                            <i class="devicon-mysql-original"></i>
+                          </div>
+                        </div>
+                        <div class="skill">SQL</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="circularProgress" data-progress="45%">
+                          <div class="icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        </div>
+                        <div class="skill">DATA ANALYTICS</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="circularProgress" data-progress="65%">
+                          <div class="icon"><img width="48" height="48" src="https://pandas.pydata.org/static/img/pandas_mark_white.svg"></div>
+                        </div>
+                        <div class="skill">PANDAS</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="circularProgress" data-progress="50%">
+                          <div class="icon"><img width="48" height="48" src="https://numpy.org/images/logo.svg"></div>
+                        </div>
+                        <div class="skill">NUMPY</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="circularProgress" data-progress="70%">
+                          <div class="icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        </div>
+                        <div class="skill">DATA VISUALIZATION</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="circularProgress" data-progress="40%">
+                          <div class="icon"><i class="fa-solid fa-robot"></i></div>
+                        </div>
+                        <div class="skill">MACHINE LEARNING</div>
+                      </div>
+                      
+					<div class="col-md-3">
+                        <div class="circularProgress" data-progress="20%">
+                          <div class="icon"><img width="48" height="48" src="https://img.icons8.com/color/48/brain-3.png" alt="brain-3"/></div>
+                        </div>
+						  
+                        <div class="skill">DEEP LEARNING</div>
+                      </div>
+						<div class="col-md-3">
+                        <div class="circularProgress" data-progress="60%">
+                          <div class="icon"><img width="48" height="48" src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg"></div>
+                        </div>
+						  
+                        <div class="skill">MICROSOFT POWER BUSINESS INTELLIGENCE</div>
+                      </div>
+						<div class="col-md-3">
+                        <div class="circularProgress" data-progress="50%">
+                          <div class="icon"><i class="fa-solid fa-snowflake"></i></div>
+                        </div>
+                        <div class="skill">SNOWFLAKE</div>
+                      </div>
+						        </div>
+                  </div>
+                </div>
+		      <div class="block">
+                  <div class="heading">
+                    Career Path:
+                  </div>
+                  <ul class="Bullets">
+                    <li>Data Analyst</li>
+                    <li>Data Scientist</li>
+                    
+                  </ul>
+                </div>
+                <div class="block">
+                  <div class="heading">
+                    Languages
+                  </div>
+                  <ul class="Bullets">
+                    <li>English</li>
+                    <li>Tamil</li>
+                  </ul>
+                </div>
+				<div class="block">
+                  <div class="heading">
+                    Hobbies
+                  </div>
+                  <ul class="Bullets">
+                    <li>Travel</li>
+                    <li>Swimming</li>
+		    <li>Browsing about new Gadget</li>
+					<li>Books Reading</li>
+                  </ul>
+                </div>
+				<div class="block">
+                  <div class="heading">
+                    Certifications
+                  </div>
+                  <ul class="Bullets">
+                    <li>DATA SCIENCE</li>
+			<li>GPT-3 with python <a style="color: inherit" href="https://www.guvi.in/verify-certificate?id=93CY3d1777g1rIh1S4"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+			  <li>Power BI <a style="color: inherit" href="https://www.guvi.in/verify-certificate?id=67L27n5Q1391qH50yj"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li>AWS <a style="color: inherit" href="https://www.guvi.in/verify-certificate?id=34C05p74H100Oau1t0"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li>MYSQL <a style="color: inherit" href="https://www.guvi.in/verify-certificate?id=g9Z1V88064754es11N"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li>Data Analytics using pandas <a style="color: inherit" href="https://www.guvi.in/verify-certificate?id=87TONc1Y31E362524H"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li>Python Foundation Program - INFOSYS <a style="color: inherit" href="https://drive.google.com/file/d/1PRYnNupr0FrwsFs2dUPlH040FSH3SqqI/view?usp=sharing"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li>HackerRank [Python, SQL]  <a style="color: inherit" href="https://drive.google.com/drive/folders/1l6LHql5y5S183Y2uL0Tx8wOfjP7l-yXQ?usp=sharing"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    </ul>
+                </div>
+				<div class="block">
+                  <div class="heading">
+                    Interests
+                  </div>
+                  <ul class="Bullets">
+                    <li>Learn new things</li>
+					          <li>Explore new places</li>
+                  </ul>
+                </div>
+				<div class="block">
+                  <div class="heading">
+                    Projects
+                  </div>
+                  <div class="subHeading">
+                    Retail Sales Prediction [JUN 2024]
+                  </div>
+                    <p>
+                    </p><li><b>Technologies used:</b> Deep Learning, Predictive Modeling, Data Preprocessing, 
+                      Feature Engineering, Exploratory Data Analysis (EDA), 
+                      Model Evaluation and Validation,  
+                      Data Visualization</li>
+                    <li><b>Description:</b> This project makes it possible to forecast each department's weekly sales report. 
+                      and it will help make informed business decisions, especially during holiday periods and promotional markdown events. 
+                    </li>
+                    <li><b>Industry:</b> GUVI</li>
+                    <li><b>Domain:</b> Retail Industry</li>
+                              <p></p>
+
+                  <div class="subHeading">
+                    Industrial Copper Modeling [MAY 2024]
+                  </div>
+                    <p>
+                    </p><li><b>Technologies used:</b> Machine Learning, Python scripting, Data Preprocessing, EDA, Streamlit</li>
+                    <li><b>Description:</b> You can forecast the material rate and whether your company will win or lose with this program. 
+                      It was accomplished by Random Forest Modeling.
+                    </li>
+                    <li><b>Industry:</b> GUVI</li>
+                    <li><b>Domain:</b> Manufacturing Unit</li>
+                              <p></p>
+
+                  <div class="subHeading">
+                    Airbnb Analysis [MAY 2024]
+                              </div>
+                  <p>
+                    </p><li><b>Technologies used:</b> Python, Data Preprocessing, EDA, Streamlit, Data Visualization, PowerBI, SnowFlake (DataBase)</li>
+                    <li><b>Description:</b> This project allows you to analyze prices by season and location. Python scripting can also
+                      be used to clean up data and preprocess it. I also utilized snowflake to learn more about it,
+                      and the visualization took place there.</li>
+                    <li><b>Industry:</b> GUVI</li>
+                    <li><b>Domain:</b> Travel Industry, Property Management and Tourism </li>
+                              <p></p>		
+                  
+                  <div class="subHeading">
+                    Extracting Business Card Data into Useful Data [APR 2024]
+                            </div>
+                            <p>
+                      </p><li><b>Technologies used:</b> Python, Streamlit GUI, Mysql, Data Extraction, RegEX, OCR, openCV</li>
+                      <li><b>Description:</b> This Python application extracts information from business cards and stores it in MySQL
+                        for later analysis. Users can update and delete facts based on selected column names.</li>
+                      <li><b>Industry:</b> GUVI</li>
+                            <p></p>
+                  <div class="subHeading">
+                    Phonepe Pulse Data Visualization and Exploration [APR 2024]
+                  </div>
+                  <p>
+            </p><li><b>Technologies used:</b> Python, Pandas, Mysql, Streamlit Dashboard, Plotly</li>
+            <li><b>Description:</b> This program clones PhonePe Pulse data from GitHub, handles essential ETL components
+              with Python, and provides insights from the data using visualization packages.</li>
+            <li><b>Industry:</b> GUVI</li>
+            <li><b>Domain:</b> FinTech</li>
+                  <p></p>
+                  <div class="subHeading">
+                    Youtube Data Harvesting and Warehousing using SQL and Streamlit [MAR 2024]
+                  </div>
+                  <p>
+                    </p><li><b>Technologies used:</b> Python, MySQL, Streamlit, Youtube API</li>
+					  <li><b>Description:</b> I completed a Streamlit user interface project for data collection and warehousing on
+              YouTube, leveraging a YouTube API key to gather data stored in a MySQL database, and
+              generating responses for specific queries, concluding with an analysis chart displaying the
+              selected sample problem.</li>
+					  <li><b>Industry:</b>GUVI</li>
+            <li><b>Domain:</b> Social Media</li>
+                  <p></p>
+    						
+                </div>
+
+		      <div class="block">
+                  <div class="heading">
+                    Tech Member Election
+                  </div>
+                  <div class="subHeading">
+                    PROJECT DEVELOPMENT
+                  </div>
+                  <p>
+			  </p><li><b>Project:</b> Comparative Analysis of Healthcare Data [MAY 2024]</li>
+        <li><b>Industry:</b> GUVI</li>
+                    <li><b>Technologies used:</b> Machine Learning, Python scripting, Data Preprocessing, EDA, Feature Engineering,
+                     Model Evaluation & Validation</li>
+                     <li><b>Description:</b> The project will walk through the key components of the project including data acquisition, preprocessing,
+                       model development, validation strategies, and deployment considerations. 
+                      This project aspires not only to develop a high-performing predictive model but also to pave the way for future endeavors in healthcare analytics, 
+                      where data-driven decision-making becomes an integral part of optimizing patient outcomes and resource utilization.</li>
+
+					          <p></p>
+              </div>
+                <div class="block">
+                  <div class="heading">
+                    Contact Details
+                  </div>
+                  <p class="text-justify">
+                    
+					</p><li><b>Mail-ID:</b> vivekarajan.sv@gmail.com</li>
+					</p><li><b>Contact No.:</b> +91 8667422017 </li>
+                  <p></p>
+		</div>
+            </div>
+          </div>
+        </div>
+      </div></main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    
+<script>
+$(document).ready(function(){
+  $(".circularProgress").each(function(index,cProgress){
+    var progressPercentage = parseInt($(cProgress).attr("data-progress"));
+    $(cProgress).css({
+      "background-image":"conic-gradient(#07cff6 "+ progressPercentage +"%, #0b090c "+progressPercentage+"%)"
+    });
+$(cProgress).attr('title', progressPercentage+'%');
+  })
+});
+
+</script>
+
+
+</body></html>
